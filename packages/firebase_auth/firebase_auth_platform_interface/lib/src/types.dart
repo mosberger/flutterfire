@@ -350,3 +350,23 @@ class AuthException implements Exception {
   /// A message containing extra information about the exception.
   final String message;
 }
+
+class MicrosoftCredentials extends AuthCredential {
+  AzureCredentials({
+    @required this.accessToken,
+    @required this.idToken,
+    @required this.tenant,
+  });
+  final String accessToken;
+  final String idToken;
+  final String tenant;
+  @override
+  Map<String, String> _asMap() => <String, String>{
+    'providerId': providerId,
+    'idToken': idToken,
+    'accessToken': accessToken,
+    'tenant': tenant,
+  };
+  @override
+  String get providerId => 'microsoft.com';
+}
