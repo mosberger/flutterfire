@@ -352,7 +352,7 @@ class AuthException implements Exception {
 }
 
 class MicrosoftCredentials extends AuthCredential {
-  AzureCredentials({
+  MicrosoftCredentials({
     @required this.accessToken,
     @required this.idToken,
     @required this.tenant,
