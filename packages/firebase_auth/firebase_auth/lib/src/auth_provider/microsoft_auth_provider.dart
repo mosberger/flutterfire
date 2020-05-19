@@ -6,9 +6,9 @@ part of firebase_auth;
 
 class MicrosoftAuthProvider {
   static AuthCredential getCredential({
-    @required this.accessToken,
-    @required this.idToken,
-    @required this.tenant,
+    @required String accessToken,
+    @required String idToken,
+    @required String tenant,
   }) {
     return MicrosoftCredentials(idToken: idToken, accessToken: accessToken, tenant: tenant);
   }
