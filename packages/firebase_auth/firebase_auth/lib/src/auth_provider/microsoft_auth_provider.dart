@@ -9,7 +9,8 @@ class MicrosoftAuthProvider {
     @required String accessToken,
     @required String idToken,
     @required String tenant,
+    String loginHint,
   }) {
-    return MicrosoftCredentials(idToken: idToken, accessToken: accessToken, tenant: tenant);
+    return MicrosoftCredentials(idToken: idToken, accessToken: accessToken, tenant: tenant, loginHint: loginHint);
   }
 }

@@ -356,16 +356,19 @@ class MicrosoftCredentials extends AuthCredential {
     @required this.accessToken,
     @required this.idToken,
     @required this.tenant,
+    this.loginHint,
   }) : super('microsoft.com');
   final String accessToken;
   final String idToken;
   final String tenant;
+  final String loginHint;
   @override
   Map<String, String> _asMap() => <String, String>{
     'providerId': providerId,
     'idToken': idToken,
     'accessToken': accessToken,
     'tenant': tenant,
+    'login_hint': loginHint,
   };
   @override
   String get providerId => 'microsoft.com';
