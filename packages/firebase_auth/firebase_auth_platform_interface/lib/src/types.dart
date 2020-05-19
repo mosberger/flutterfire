@@ -356,7 +356,7 @@ class MicrosoftCredentials extends AuthCredential {
     @required this.accessToken,
     @required this.idToken,
     @required this.tenant,
-  });
+  }) : super('microsoft.com');
   final String accessToken;
   final String idToken;
   final String tenant;
